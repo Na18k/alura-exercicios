@@ -19,11 +19,11 @@
 	// - Funções próprias
 
 	function resolucao() {
-		document.write("A minha idade é " + minhaIdade + " anos e a do meu irmão é " + idadeIrmao + " anos, ou seja, subtraimos " + "<c>" + minhaIdade + "-" + idadeIrmao + "</c>");
+		document.write("A minha idade é " + minhaIdade + " anos e a do meu irmão é " + idadeIrmao + " anos, ou seja, subtraimos " + minhaIdade + "-" + idadeIrmao);
 	}
 
 	function resposta() {
-		document.write("Nossa diferença de idade é " + "<c>" + diferencaIdade + "</c>")
+		document.write("Nossa diferença de idade é " + diferencaIdade);
 	}
 
 	// ---
@@ -33,7 +33,7 @@
 
 	var diferencaIdade = minhaIdade - idadeIrmao;
 
-	mostrar("<c>Resposta</c>");
+	mostrar("RESPOSTA:");
 	pularLinha();
 	resolucao();
 
