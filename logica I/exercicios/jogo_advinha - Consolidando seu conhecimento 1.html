@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+
+	// Código passado pelo exercício.
+
+	function pulaLinha() {
+		// pulando duas linhas
+		document.write("<br>");	
+		document.write("<br>");	
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	function sorteia(n) {
+		return Math.round(Math.random() * n);
+		
+	}
+
+	// =========
+
+    var numeroPensado = sorteia(10);
+    console.log(numeroPensado);
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    // =========
+
+    if(chute == numeroPensado) {
+    	mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+
+    } else {
+    	// Se a pessoa errar o número pensado, então ela verá se era maior ou menor do que tinha então havia pensado como mostra abaixo:
+    
+    	if(chute != numeroPensado) {
+
+    		if(chute < numeroPensado) {
+    			mostra("Você errou! Eu tinha pensado no " + numeroPensado + ", ou seja você chutou um número <b>menor</b> do que tinha pensado!");
+
+    		} else {
+    			mostra("Você errou! Eu tinha pensado no " + numeroPensado + ", ou seja você chutou um número <b>maior</b> do que tinha pensado!");
+
+    		}
+     	}
+    }
+
+</script>
+
