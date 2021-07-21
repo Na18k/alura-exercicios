@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+
+	function pulaLinha() {
+		// pulando duas linhas
+		document.write("<br>");	
+		document.write("<br>");	
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	// ================
+
+	var numero = 30;
+
+	while(numero <= 40) {
+
+        if( numero == 33 ) {
+        	numero = numero + 1;
+
+        }
+        if(numero == 37) {    
+            numero = numero + 1;
+
+        } 
+        else {
+        	mostra(numero);
+        	numero = numero + 1;
+
+        }
+    }
+
+    mostra("Fim");
+
+</script>
