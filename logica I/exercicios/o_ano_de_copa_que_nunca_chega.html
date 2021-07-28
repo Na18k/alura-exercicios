@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+
+    function pulaLinha() {
+        // pulando uma linha
+        document.write("<br>"); 
+    }
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    // Código para fazer
+
+    var anoCopa = 1930;
+    var limite = parseInt(prompt("Qual é o ano limite?"));
+
+    while(anoCopa <= limite) {
+
+        mostra(anoCopa + " tem copa!");
+        anoCopa = anoCopa + 4;
+    }
+
+    
+
+    mostra("Ufa! Esses foram os anos de copa até " + limite);
+
+</script>
