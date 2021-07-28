@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+
+    //================== Pura estetica ==================
+
+    function sistema(nome) {
+        document.write("░░░░░░░░░░░░░░░░░░░░░░█████████░░░░░░░░░<br>░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███░░░░░░░<br>░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███░░░░<br>░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██░░<br>░░░░█▒▒▒▒▒█░░░██▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒███░<br>░░░░░█▒▒▒█░░░█▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒▒▒██<br>░░░█████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██<br>░░░█▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒██<br>░██▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██<br>██▒▒▒███████████▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒██<br>█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒████████▒▒▒▒▒▒▒██<br>██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██░<br>░█▒▒▒███████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██░░░<br>░██▒▒▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█░░░░░<br>░░████████████░░░█████████████████░░░░░░");
+        document.write("<hr>");
+        document.write(nome + " Parabéns enfiim logado, e agora?");
+
+    }
+
+    function negado(nome) {
+
+        document.write("──────▄▀▄─────▄▀▄<br>─────▄█░░▀▀▀▀▀░░█▄<br>─▄▄──█░░░░░░░░░░░█──▄▄<br>█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█<br>");
+        document.write("<hr>");
+        document.write(nome + " Seu acesso foi negado, pois você errou seu login e senha!");
+    }
+
+    //================== Fim da tal pura estetica ==================
+
+    // Dados cadastrais
+
+    var loginCadastrado = "admin";
+    var senhaCadastrada = "root";
+
+    // ================
+
+    var tentativas = 3;
+
+    var tentativasUsadas = 1;
+
+
+    // tentativaAtualmente é pura estetica
+    var tentativaAtualmente = 2;
+    // 0 = flase // 1 = true
+    var loginBemSucedido = 0
+
+
+
+    // sitema de login
+
+    while(tentativasUsadas <= tentativas && loginBemSucedido == 0) {
+
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            alert("Bem-vindo ao sistema " + loginInformado);
+            sistema(loginInformado);
+
+            var loginBemSucedido = loginBemSucedido + 1;
+
+        } else {
+            if (loginBemSucedido == 0 && tentativasUsadas <= tentativas) {
+                alert("Login inválido. Você possui " + tentativaAtualmente + " tentaivas atualmente.");
+                tentativaAtualmente = tentativaAtualmente - 1;
+            }
+            
+        }
+        var tentativasUsadas = tentativasUsadas + 1;
+
+    } 
+
+    if (tentativasUsadas >= tentativas) {
+        alert("Acesso negado totalmente");
+        negado(loginInformado);
+    }
+
+</script>
