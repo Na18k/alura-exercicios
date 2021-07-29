@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+    function pulaLinha() {
+        document.write("<br>");
+
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+
+    }
+
+    var totalDeEventos = parseInt(prompt("Informe o total de eventos"));
+
+    var contador = 1;
+
+    // O equívoco de Kauan foi colocar a variavel "totalGastoComEventos" dentro da funçao "while", o que de certa forma ocorria é que toda vez que a funçao "while" se repetia ela então deixava a variavel "totalGastoComEventos" igual a 0.
+    var totalGastoComEventos = 0;
+
+    // ------
+
+    while(contador <= totalDeEventos) {
+
+        var gasto = parseFloat(prompt("Informe total gasto com evento"));
+        totalGastoComEventos = totalGastoComEventos + gasto;
+        contador++;
+    }
+
+    var media = totalGastoComEventos / totalDeEventos;
+
+    mostra("A média de gastos é " + media);
+
+</script>
