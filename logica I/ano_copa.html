@@ -14,18 +14,18 @@
 		pulaLinha();
 	}
 
-	var ano = 2016;
+	var limite = parseInt(prompt("Entre com a data limite"));
 	
-	mostra("Flávio tem " + (ano - 1977) + " anos");
+	var anoCopa = 1930;
 
-	mostra("Joaquim tem " + (ano - 1996) + " anos");
+	while(anoCopa <= limite) {
 
-	ano = 2017;
+		mostra("Teve copa em " + anoCopa);
+		anoCopa = anoCopa + 4;	
+	}
+
+	mostra("FIM");
 	
-	mostra("Barney tem " + (ano - 1976) + " anos");
-
-
-
 </script>
 
 
