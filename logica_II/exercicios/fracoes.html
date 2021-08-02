@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<p><b>Qual é a fração?</b></p>
+
+<canvas width="600" height="400"></canvas>  
+
+<script type="text/javascript">
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+
+    function desenhaQuadrado(x, y, tamanho, cor) {
+    // aqui precisamos usar fillRect, strokeRect, etc 
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, tamanho, tamanho);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x, y, tamanho, tamanho);
+    }
+
+    function bordaQuadrado(x, y, tamanho, cor) {
+        pincel.strokeStyle = cor;
+        pincel.strokeRect(x, y, tamanho, tamanho);
+    }
+
+    desenhaQuadrado(0, 0, 50, "green");
+    desenhaQuadrado(50, 0, 50, "green");
+    desenhaQuadrado(100, 0, 50, "green");
+
+    bordaQuadrado(150, 0, 50, "black");
+
+    
+
+
+
+
+
+</script>
