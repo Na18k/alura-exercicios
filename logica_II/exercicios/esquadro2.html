@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+
+    function desenhaEsquadro(xa, ya, xc, yc, cor) {
+        //a implementacao fica com vc :)
+
+        // desenha um  triângulo
+        pincel.fillStyle= cor;
+        pincel.beginPath();
+        pincel.moveTo(xa, ya);
+        pincel.lineTo(xa, yc);
+        pincel.lineTo(xc, yc);
+        pincel.fill();
+    }
+
+    // desenhar esquadro
+
+    desenhaEsquadro(50, 50, 400, 400, "black");
+    desenhaEsquadro(100, 175, 275, 350, "white");
+
+</script>
