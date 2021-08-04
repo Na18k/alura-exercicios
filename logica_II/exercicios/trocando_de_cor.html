@@ -1,0 +1,100 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+    document.write("<br>");
+    document.write("Para mudar a cor utilize o <b>botão direito do mouse!</b>");
+    document.write("<br>");
+    document.write("<br>");
+</script>
+
+<input/>
+<button>Alterar de cor</button>
+
+
+
+<script type="text/javascript">
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+        pincel.fillStyle = cores[corEscolhida];
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2 * 3.14);
+        pincel.fill();
+        console.log(x + ',' + y);
+    }
+
+    tela.onclick = desenhaCirculo;
+
+    var cores = ["blue", "red", "green", "orange", "black", "pink", "purple", "magenta", "white", "brown", "yellow", "aqua", "silver", "olive"];
+    var corEscolhida = 0;
+
+    function mudaCor() {
+
+        corEscolhida++;
+
+        if(corEscolhida >= cores.length) {
+            corEscolhida = 0;
+            alert("[Cores Resetadas]" + " Cor atual: " + cores[corEscolhida]);
+        } else {
+            alert("Cor alterada para: " + cores[corEscolhida]);
+        }
+
+        return false;
+    }
+
+    tela.oncontextmenu = mudaCor;
+
+    // =============== Indice abaixo: ==================
+
+    document.write("<br>");
+    document.write("<br>");
+    document.write("INDICES DE CORES ABAIXO:");
+    document.write("<br>");
+    document.write("<br>");
+
+    var contador = 0;
+    while(contador < cores.length) {
+
+        document.write("Cor N°" + contador + " é <b>" + cores[contador] + "</b>");
+        document.write("<br>");
+        contador++
+    }
+
+    var input = document.querySelector("input");
+    var botao = document.querySelector("button");
+
+    function achouACor() {
+
+       var achouACor = false;
+
+       for(var i = 0; i < cores.length; i++) {
+
+              if(input.value == cores[i]) {
+                corEscolhida = i;
+                achouACor = true;
+                break;
+              } 
+       }
+
+       if(achouACor == false) {
+              alert("Essa cor não consta!");
+
+       }
+       input.value = "";
+       input.focus();
+
+    }
+
+    botao.onclick = achouACor;
+
+
+</script>
