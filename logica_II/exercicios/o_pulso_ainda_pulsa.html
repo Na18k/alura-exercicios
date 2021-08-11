@@ -1,0 +1,56 @@
+<canvas width="600" height="400"></canvas>
+<br>
+Escolha uma cor <input type="color">
+
+<script type="text/javascript">
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var inputColor = document.querySelector("input");
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    // Ajustaveis
+    var minimo = 20;
+    var maximo = 30;
+
+    // Alterado sozinhos
+    var raioAtual = minimo;
+    var tipoDeRaio = 1;
+
+    function pulso() {
+
+        if(raioAtual > maximo) {
+
+            tipoDeRaio = -1;
+
+        } else if(raioAtual < minimo) {
+
+            tipoDeRaio = 1;
+
+        }
+
+        limpaTela();
+        desenhaCirculo(300, 200, raioAtual, inputColor.value);
+
+        raioAtual = raioAtual + tipoDeRaio;
+
+    } 
+
+    setInterval(pulso, 20);
+    
+</script>
