@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+
+<h1>Exercício N°5</h1>
+
+<p><b>Aluno:</b> Kainan Henrique <b>//</b> Prof° Vitor Yano.</p>
+
+<p>Escreva um programa que lista todos os números primos até 1000.</p>
+<hr>
+
+<script type="text/javascript">
+
+	function mostra(texto) {
+		document.write(texto);
+		document.write("<br>");
+
+	}
+
+	var limite = 1000
+
+	for(var numero = 0; numero <= limite; numero++) {
+
+		var contagem = 0;
+
+		for(var x = 0; x <= numero; x++) {
+
+			if(numero % x == 0) {
+				contagem++;
+
+			}
+		}
+
+		if(contagem == 2) {
+			mostra(numero);
+
+		} 
+	}
+
+</script>

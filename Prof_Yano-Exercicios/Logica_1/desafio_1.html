@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+
+<h1>Exercício N°3</h1>
+
+<p><b>Aluno:</b> Kainan Henrique <b>//</b> Prof° Vitor Yano.</p>
+
+<p>Escreva um programa que recebe três números do usuário e mostre-os em ordem crescente</p>
+
+<hr>
+<br>
+
+<script type="text/javascript">
+
+	function mostra(numero) {
+		document.write(numero + " ");
+	}
+
+	var numero1 = parseInt(prompt("De um o Primeiro número"));
+	var numero2 = parseInt(prompt("De um o Segundo número"));
+	var numero3 = parseInt(prompt("De um o Terceiro número"));
+
+	// Testa se o numero1 é o primeiro.
+	if(numero1 < numero2 && numero1 < numero3) {
+		mostra(numero1);
+
+		// Testa se o numero2 é o segundo.
+		if(numero2 < numero3) {
+			mostra(numero2);
+			// consequentemente o numero3 é o ultimo.
+			mostra(numero3);
+
+		} else {
+			// se o numero2 não for o segundo então segue essa ordem.
+			mostra(numero3);
+			mostra(numero2);
+
+		}
+	}
+// ==================================
+
+	// Testa se o numero2 é o primeiro.
+	if(numero2 < numero1 && numero2 < numero3) {
+		mostra(numero2);
+
+		// Testa se o numero3 é o segundo.
+		if(numero3 < numero1) {
+			mostra(numero3);
+			// consequentemente o numero1 é o ultimo.
+			mostra(numero1);
+
+		} else {
+			// se o numero3 não for o segundo então segue essa ordem.
+			mostra(numero1);
+			mostra(numero3);
+
+		}
+	}
+// ==================================
+
+	// Testa se o numero2 é o primeiro.
+	if(numero3 < numero1 && numero3 < numero2) {
+		mostra(numero3);
+
+		// Testa se o numero2 é o segundo.
+		if(numero2 < numero1) {
+			mostra(numero2);
+			// consequentemente o numero1 é o ultimo.
+			mostra(numero1);
+
+		} else {
+			// se o numero2 não for o segundo então segue essa ordem.
+			mostra(numero1);
+			mostra(numero2);
+
+		}
+	}
+
+</script>

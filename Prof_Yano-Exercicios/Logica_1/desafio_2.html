@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+
+<h1>Exercício N°5</h1>
+
+<p><b>Aluno:</b> Kainan Henrique <b>//</b> Prof° Vitor Yano.</p>
+
+<p>Escreva um programa que recebe um número inteiro do usuário e informa se é um número primo.</p>
+
+<script type="text/javascript">
+
+	function mostra(texto) {
+		document.write(texto);
+		document.write("<br>");
+
+	}
+
+	var numero = parseInt(prompt("Digite um número para saber se ele é primo."));
+
+	var contagem = 0;
+
+	for(var x = 0; x <= numero; x++) {
+
+		if(numero % x == 0) {
+			contagem++;
+
+		}
+	}
+
+	// Estetico
+	mostra("<hr>");
+
+	if(contagem == 2) {
+		mostra("<b>" + numero + "</b> é primo");
+
+	} else {
+		mostra("<b>" + numero + "</b> não é primo");
+
+	}
+
+</script>

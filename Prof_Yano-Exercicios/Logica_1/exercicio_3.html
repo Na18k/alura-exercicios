@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<h1>Exercício N°3</h1>
+
+<p><b>Aluno:</b> Kainan Henrique <b>//</b> Prof° Vitor Yano.</p>
+
+<p>Escreva um programa que recebe três números do usuário e informa qual é o maior.</p>
+
+<script type="text/javascript">
+
+	function mostra(valor) {
+		document.write("O número " + valor + " é o Maior.");
+	}
+
+	var numero1 = parseInt(prompt("De um o Primeiro número"));
+	var numero2 = parseInt(prompt("De um o Segundo número"));
+	var numero3 = parseInt(prompt("De um o Terceiro número"));
+
+	// Testa se o numero1 é o maior.
+	if (numero2 < numero1 && numero3 < numero1) {
+		mostra(numero1);
+
+	} else {
+		// Testa se o numero2 é o maior.
+		if(numero1 < numero2 && numero3 < numero2) {
+			mostra(numero2);
+
+		} else {
+			// Se nehumas das alternativas acima for o número, então o numero3 é o maior.
+			mostra(numero3);
+
+		}
+		
+
+	}
+
+</script>

@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+
+<h1>Exercício N°1</h1>
+
+<p><b>Aluno:</b> Kainan Henrique <b>//</b> Prof° Vitor Yano.</p>
+
+<p>Escreva um programa que recebe três notas de aluno, calcula a média e informa se foi aprovado ou reprovado.</p>
+
+<script type="text/javascript">
+
+	function calcula(x, y ,z) {
+		return (x + y + z) / 3
+		// Calcula a média de 3 elementos.
+	}
+
+	var nome = prompt("Digite seu nome:")
+	var nota1 = parseFloat(prompt("Digite sua Nota (Ex: 10.0)"));
+	var nota2 = parseFloat(prompt("Digite sua Nota (Ex: 10.0)"));
+	var nota3 = parseFloat(prompt("Digite sua Nota (Ex: 10.0)"));
+
+	var resultado = calcula(nota1, nota2, nota3);
+	// Calcula a média utilizando a função calcula.
+
+	document.write("<hr>");
+	// Cria um sepador.
+
+	document.write(nome + " sua média foi: " + "<b>" + resultado + "</b>");
+	// Dá o resultado da média.
+
+	if (resultado >= 6.0) {
+		document.write("<br>");
+		document.write("Você foi aprovado");
+
+	} else {
+		document.write("<br>");
+		document.write("Você foi reprovado");
+		
+	}
+
+</script>
