@@ -1,4 +1,5 @@
-# alura-exercicios
+# alura-exercicios [FINALIZADO]
+
 
 <p align="center">
 <img src="https://visitor-badge.laobi.icu/badge?page_id=Na18k/alura-exercicios-pessoal" align="center" alt="Repository.md"/>
